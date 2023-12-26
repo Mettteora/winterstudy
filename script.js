@@ -1,15 +1,29 @@
-const totalSpend = 2000;
-let payment = 4200;
-let discount = 0;
+const logins = [`mrhens`, `mrhens2021`, `mrhens2051`, `mrhens2013`];
 
-if (totalSpend > 100 <= 1000) {
-  discount = 0.02;
-} else if (totalSpend > 1000 < 5000) {
-  discount = 0.05;
-} else if (totalSpend > 5000) {
-  discount = 0.1;
-}
+const loginToFind = `mrhens2013`;
+let message = ``;
+// for (let i = 0; i <= logins.length - 1; i += 1) {
+//   const login = logins[i];
+//   console.log(login);
+//   console.log(`${login} === ${loginToFind}:`, login === loginToFind);
+//   if (login === loginToFind) {
+//     message = `Пользователь найден с логином ${login}`;
+//     break;
+//   }
+//   message = `Пользвоатель с логином ${loginToFind} не найден `;
+// }
+// console.log(message);
 
-console.log(
-  `оформляем заказ на сумму ${payment} со скидкой ${discount * 100}%`
-);
+// for (login of logins) {
+//   if (loginToFind === login) {
+//     message = `Пользователь найден с логином ${login}`;
+//     break;
+//   }
+// }
+// console.log(message);
+// console.log(logins.includes(loginToFind));
+
+const a = logins.includes(loginToFind)
+  ? `Пользователь найден с логином ${loginToFind}`
+  : `Пользвоатель с логином ${loginToFind} не найден `;
+console.log(a);
